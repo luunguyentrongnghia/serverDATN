@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Thông Báo Hủy Tin Đăng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            background-color: #ff4c4c;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 20px;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #999999;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1>Thông Báo Hủy Tin Đăng</h1>
+        </div>
+        <div class="content">
+            <p>Chào {{userName}},</p>
+            <p>Chúng tôi rất tiếc phải thông báo rằng tin đăng của bạn đã bị hủy vì lý do sau:</p>
+            <p>
+                <strong>Lý do hủy:</strong> {{cancelReason}}
+            </p>
+            <hr />
+            <p>
+                <strong>ID Tin Đăng:</strong> {{postId}}<br />
+                <strong>Tên Người Đăng:</strong> {{userName}}
+            </p>
+            <p>Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi qua email hoặc đường dây nóng để được hỗ
+                trợ.</p>
+            <p>Trân trọng,<br />Đội ngũ quản trị</p>
+        </div>
+        <div class="footer">
+            <p>Email này được gửi tự động, vui lòng không trả lời trực tiếp.</p>
+        </div>
+    </div>
+</body>
+
+</html>

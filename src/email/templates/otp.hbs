@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xác thực tài khoản</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Xác thực tài khoản của bạn</h1>
+        <p>Xin chào,</p>
+        <p>Mã OTP của bạn là: <strong>{{ otp }}</strong></p>
+        <p>Vui lòng nhập mã này để hoàn tất việc xác thực.</p>
+        <p>Trân trọng,</p>
+        <p>Đội ngũ hỗ trợ của chúng tôi</p>
+    </div>
+</body>
+
+</html>

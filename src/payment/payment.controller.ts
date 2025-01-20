@@ -8,15 +8,16 @@ export class PaymentController {
   @Post('create')
   async createPayment(
     @Req() req: any,
-    @Body() body: { amount: number; urlClient: string },
+    @Body() body: { amount: number; urlClient: string; urlBe: string },
   ) {
-    const { amount, urlClient } = body;
+    const { amount, urlClient, urlBe } = body;
     console.log(body);
     try {
       const momoResponse = await this.paymentService.createPayment(
         amount,
         req.user.id,
         urlClient,
+        urlBe,
       );
 
       return momoResponse;

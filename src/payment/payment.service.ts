@@ -18,6 +18,7 @@ export class PaymentService {
     amount: number,
     userId: string,
     urlClient: string,
+    urlBe: string,
   ): Promise<string> {
     var partnerCode = 'MOMO';
     var accessKey = 'F8BBA842ECF85';
@@ -28,7 +29,7 @@ export class PaymentService {
     var orderId = requestId;
     var orderInfo = 'pay with MoMo';
     var redirectUrl = 'https://momo.vn/return';
-    var ipnUrl = `${process.env.URL_BE}/api/v1/payment/callback`;
+    var ipnUrl = `${urlBe}/api/v1/payment/callback`;
     var requestType = 'payWithMethod';
     var extraData = urlClient;
     var rawSignature =

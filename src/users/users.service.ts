@@ -139,14 +139,14 @@ export class UsersService {
       if (token) {
         res.cookie('access_token', token.access_token, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === 'production',
+          secure: true,
           sameSite: 'strict',
           maxAge: 10 * 60 * 1000, // 10 phút
         });
 
         res.cookie('refresh_token', token.refresh_token, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === 'production',
+          secure: true,
           sameSite: 'strict',
           maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
         });
@@ -204,14 +204,14 @@ export class UsersService {
       if (token) {
         res.cookie('access_token', token.access_token, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === 'production',
+          secure: true,
           sameSite: 'strict',
           maxAge: 10 * 60 * 1000, // 10 phút
         });
 
         res.cookie('refresh_token', token.refresh_token, {
           httpOnly: true,
-          secure: process.env.NODE_ENV === 'production',
+          secure: true,
           sameSite: 'strict',
           maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
         });
@@ -233,14 +233,14 @@ export class UsersService {
       token = await this.generateToken(checkUser.id);
       res.cookie('access_token', token.access_token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
+        secure: true,
         sameSite: 'strict',
         maxAge: 10 * 60 * 1000, // 10 phút
       });
 
       res.cookie('refresh_token', token.refresh_token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
+        secure: true,
         sameSite: 'strict',
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
       });

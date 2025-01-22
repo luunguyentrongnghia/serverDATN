@@ -140,14 +140,14 @@ export class UsersService {
         res.cookie('access_token', token.access_token, {
           httpOnly: true,
           secure: true,
-          sameSite: 'strict',
+          sameSite: 'none',
           maxAge: 10 * 60 * 1000, // 10 phút
         });
 
         res.cookie('refresh_token', token.refresh_token, {
           httpOnly: true,
           secure: true,
-          sameSite: 'strict',
+          sameSite: 'none',
           maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
         });
       }
@@ -205,14 +205,14 @@ export class UsersService {
         res.cookie('access_token', token.access_token, {
           httpOnly: true,
           secure: true,
-          sameSite: 'strict',
+          sameSite: 'none',
           maxAge: 10 * 60 * 1000, // 10 phút
         });
 
         res.cookie('refresh_token', token.refresh_token, {
           httpOnly: true,
           secure: true,
-          sameSite: 'strict',
+          sameSite: 'none',
           maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
         });
       }
@@ -234,14 +234,14 @@ export class UsersService {
       res.cookie('access_token', token.access_token, {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        sameSite: 'none',
         maxAge: 10 * 60 * 1000, // 10 phút
       });
 
       res.cookie('refresh_token', token.refresh_token, {
         httpOnly: true,
         secure: true,
-        sameSite: 'strict',
+        sameSite: 'none',
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7 ngày
       });
     }

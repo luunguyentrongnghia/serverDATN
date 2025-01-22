@@ -25,6 +25,10 @@ export const dataSoureOptions: DataSourceOptions = {
   ssl: {
     rejectUnauthorized: false,
   },
+  connectTimeoutMS: 30000,
+  extra: {
+    keepAlive: true, // Giữ kết nối
+  },
   entities: [
     Province,
     District,

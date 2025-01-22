@@ -69,29 +69,29 @@ export class AppService {
       `${postsToUpdate.length} bài đăng đã được chuyển sang trạng thái REJECTED.`,
     );
   }
-  @Cron('* * * * *')
-  async UpdateExpiredStatus() {
-    const now = new Date();
+  // @Cron('* * * * *')
+  // async UpdateExpiredStatus() {
+  //   const now = new Date();
 
-    const tinDangList = await this.postRepository.find({
-      where: {
-        status: PropertieStatus.APPROVED,
-        end_date: LessThanOrEqual(now),
-      },
-    });
+  //   const tinDangList = await this.postRepository.find({
+  //     where: {
+  //       status: PropertieStatus.APPROVED,
+  //       end_date: LessThanOrEqual(now),
+  //     },
+  //   });
 
-    for (const tinDang of tinDangList) {
-      const { id, end_date } = tinDang;
-      const endDate = new Date(end_date);
+  //   for (const tinDang of tinDangList) {
+  //     const { id, end_date } = tinDang;
+  //     const endDate = new Date(end_date);
 
-      if (endDate <= now) {
-        await this.postRepository.update(id, {
-          status: PropertieStatus.EXPIRED,
-        });
-        console.log(`Tin đăng ID: ${id} đã hết hạn`);
-      }
-    }
-  }
+  //     if (endDate <= now) {
+  //       await this.postRepository.update(id, {
+  //         status: PropertieStatus.EXPIRED,
+  //       });
+  //       console.log(`Tin đăng ID: ${id} đã hết hạn`);
+  //     }
+  //   }
+  // }
   // async onApplicationBootstrap() {
   //   console.log('Restoring jobs for tin dang...');
 
